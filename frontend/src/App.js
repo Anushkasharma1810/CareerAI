@@ -3,7 +3,7 @@ import './App.css';
 import { useDropzone } from 'react-dropzone';
 import axios from 'axios';
 
-const API = 'http://localhost:5000';
+const API = 'https://careerai-sj2w.onrender.com';
 
 // ── Score Ring ───────────────────────────────────────────────────────────────
 function ScoreRing({ score }) {
