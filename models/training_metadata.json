@@ -1,0 +1,259 @@
+{
+  "version": "1.1.0",
+  "best_model": "Logistic Regression",
+  "selection_criterion": "mean CV F1 (weighted) on training set \u2014 test set not used for selection",
+  "selection_reason": "Logistic Regression CV F1 (0.8877) >= Random Forest CV F1 (0.8843)",
+  "label_classes": [
+    "AI/ML Engineer",
+    "Data Analyst",
+    "DevOps Engineer",
+    "Software Engineer",
+    "Web Developer"
+  ],
+  "tfidf_config": {
+    "max_features": 8000,
+    "ngram_range": [
+      1,
+      2
+    ],
+    "min_df": 1,
+    "max_df": 0.95,
+    "sublinear_tf": true
+  },
+  "cv_folds": 5,
+  "models": {
+    "logistic_regression": {
+      "config": {
+        "C": 1.0,
+        "max_iter": 1000,
+        "solver": "lbfgs",
+        "random_state": 42
+      },
+      "metrics": {
+        "name": "Logistic Regression",
+        "cv_f1_mean": 0.8877,
+        "cv_f1_std": 0.0137,
+        "cv_fold_scores": [
+          0.8975,
+          0.8652,
+          0.8847,
+          0.9055,
+          0.8855
+        ],
+        "accuracy": 0.882,
+        "precision_weighted": 0.883,
+        "recall_weighted": 0.882,
+        "f1_weighted": 0.8823,
+        "confusion_matrix": [
+          [
+            86,
+            7,
+            0,
+            3,
+            4
+          ],
+          [
+            7,
+            83,
+            0,
+            8,
+            2
+          ],
+          [
+            0,
+            1,
+            96,
+            3,
+            0
+          ],
+          [
+            2,
+            6,
+            3,
+            85,
+            4
+          ],
+          [
+            2,
+            0,
+            0,
+            7,
+            91
+          ]
+        ],
+        "classification_report": {
+          "AI/ML Engineer": {
+            "precision": 0.8865979381443299,
+            "recall": 0.86,
+            "f1-score": 0.8730964467005076,
+            "support": 100.0
+          },
+          "Data Analyst": {
+            "precision": 0.8556701030927835,
+            "recall": 0.83,
+            "f1-score": 0.8426395939086294,
+            "support": 100.0
+          },
+          "DevOps Engineer": {
+            "precision": 0.9696969696969697,
+            "recall": 0.96,
+            "f1-score": 0.964824120603015,
+            "support": 100.0
+          },
+          "Software Engineer": {
+            "precision": 0.8018867924528302,
+            "recall": 0.85,
+            "f1-score": 0.8252427184466019,
+            "support": 100.0
+          },
+          "Web Developer": {
+            "precision": 0.900990099009901,
+            "recall": 0.91,
+            "f1-score": 0.9054726368159204,
+            "support": 100.0
+          },
+          "accuracy": 0.882,
+          "macro avg": {
+            "precision": 0.8829683804793629,
+            "recall": 0.882,
+            "f1-score": 0.8822551032949348,
+            "support": 500.0
+          },
+          "weighted avg": {
+            "precision": 0.8829683804793629,
+            "recall": 0.882,
+            "f1-score": 0.8822551032949347,
+            "support": 500.0
+          }
+        },
+        "train_time_seconds": 0.79
+      }
+    },
+    "random_forest": {
+      "config": {
+        "n_estimators": 200,
+        "max_depth": null,
+        "min_samples_split": 4,
+        "min_samples_leaf": 2,
+        "random_state": 42,
+        "n_jobs": -1
+      },
+      "metrics": {
+        "name": "Random Forest",
+        "cv_f1_mean": 0.8843,
+        "cv_f1_std": 0.012,
+        "cv_fold_scores": [
+          0.8821,
+          0.8667,
+          0.8974,
+          0.8981,
+          0.8773
+        ],
+        "accuracy": 0.888,
+        "precision_weighted": 0.8879,
+        "recall_weighted": 0.888,
+        "f1_weighted": 0.8879,
+        "confusion_matrix": [
+          [
+            88,
+            5,
+            0,
+            4,
+            3
+          ],
+          [
+            7,
+            86,
+            0,
+            6,
+            1
+          ],
+          [
+            0,
+            0,
+            98,
+            2,
+            0
+          ],
+          [
+            3,
+            5,
+            4,
+            82,
+            6
+          ],
+          [
+            2,
+            1,
+            0,
+            7,
+            90
+          ]
+        ],
+        "classification_report": {
+          "AI/ML Engineer": {
+            "precision": 0.88,
+            "recall": 0.88,
+            "f1-score": 0.88,
+            "support": 100.0
+          },
+          "Data Analyst": {
+            "precision": 0.8865979381443299,
+            "recall": 0.86,
+            "f1-score": 0.8730964467005076,
+            "support": 100.0
+          },
+          "DevOps Engineer": {
+            "precision": 0.9607843137254902,
+            "recall": 0.98,
+            "f1-score": 0.9702970297029703,
+            "support": 100.0
+          },
+          "Software Engineer": {
+            "precision": 0.8118811881188119,
+            "recall": 0.82,
+            "f1-score": 0.8159203980099502,
+            "support": 100.0
+          },
+          "Web Developer": {
+            "precision": 0.9,
+            "recall": 0.9,
+            "f1-score": 0.9,
+            "support": 100.0
+          },
+          "accuracy": 0.888,
+          "macro avg": {
+            "precision": 0.8878526879977265,
+            "recall": 0.8879999999999999,
+            "f1-score": 0.8878627748826856,
+            "support": 500.0
+          },
+          "weighted avg": {
+            "precision": 0.8878526879977264,
+            "recall": 0.888,
+            "f1-score": 0.8878627748826857,
+            "support": 500.0
+          }
+        },
+        "train_time_seconds": 1.45
+      }
+    }
+  },
+  "dataset": {
+    "total_samples": 2500,
+    "train_samples": 2000,
+    "test_samples": 500,
+    "num_classes": 5,
+    "classes": [
+      "AI/ML Engineer",
+      "Data Analyst",
+      "DevOps Engineer",
+      "Software Engineer",
+      "Web Developer"
+    ],
+    "source": "ahmedheakl/resume-atlas (HuggingFace, Apache 2.0)",
+    "note": "Real resume texts. Non-tech categories excluded. Balanced to 500/class."
+  },
+  "test_size": 0.2,
+  "random_state": 42
+}

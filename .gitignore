@@ -1,0 +1,38 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.egg-info/
+dist/
+build/
+
+# Virtual environments
+venv/
+.venv/
+env/
+
+# Environment variables
+.env
+
+# Jupyter
+.ipynb_checkpoints/
+
+# IDE
+.vscode/
+.idea/
+
+# Models (large binary - commit only metadata)
+models/*.pkl
+models/*.joblib
+
+# Data
+data/raw/*.csv
+data/processed/*.csv
+
+# Uploads temp
+backend/uploads/
+
+# Node
+frontend/node_modules/
+frontend/build/
