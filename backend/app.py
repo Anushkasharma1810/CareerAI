@@ -33,7 +33,11 @@ def create_app() -> Flask:
     app = Flask(__name__)
 
     # CORS: allow React dev server
-    CORS(app, resources={r"/*": {"origins": ["http://localhost:3000", "http://127.0.0.1:3000"]}})
+    CORS(app, resources={r"/*": {"origins": [
+    "http://localhost:3000",
+    "http://127.0.0.1:3000",
+    "https://career-ai-theta-ashy.vercel.app"
+]}})
 
     # ── Register blueprints ────────────────────────────────────────────────
     from backend.routes.api import api_bp
