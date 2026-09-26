@@ -183,7 +183,6 @@ function ResultsPage({ data, onBack }) {
   const jd = data.job_description || {};
 
   const score = match.overall_score ?? 0;
-  const scoreColor = score >= 70 ? '#51cf66' : score >= 45 ? '#ffd43b' : '#ff6b6b';
 
   const allProbs = pred.all_probabilities
     ? Object.entries(pred.all_probabilities).sort((a, b) => b[1] - a[1])
