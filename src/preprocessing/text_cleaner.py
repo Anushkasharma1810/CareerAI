@@ -9,6 +9,12 @@ import re
 import string
 import unicodedata
 import nltk
+import os
+
+_NLTK_DATA_DIR = os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(__file__))), "nltk_data")
+os.makedirs(_NLTK_DATA_DIR, exist_ok=True)
+
+nltk.data.path.insert(0, _NLTK_DATA_DIR)
 
 # Download required NLTK data at first use (idempotent)
 # NLTK 3.9+ uses punkt_tab instead of punkt
